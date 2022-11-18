@@ -1,10 +1,25 @@
 import machine
 import sdcard
 import uos
+import time
 
+cs = machine.Pin(1, machine.Pin.OUT)
+led=machine.Pin(25,machine .Pin.OUT)
+
+def Blink():
+    #turn Led off
+    led.off()
+    #Delay for 1 second
+    time.sleep(1)
+    #Turn led off
+    led.on()
+    #Delay for 1 second
+    time.sleep(1)
+    #turn Led off
+    led.off()
+    
 #get the sdcard.py from https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/storage/sdcard/sdcard.py
 # Assign chip select (CS) pin (and start it high)
-cs = machine.Pin(1, machine.Pin.OUT)
 
 # Intialize SPI peripheral (start with 1 MHz)
 spi = machine.SPI(0,
@@ -33,3 +48,4 @@ with open("/sd/test01.csv", "w") as file:
 with open("/sd/test01.txt", "r") as file:
     data = file.read()
     print(data)
+    Blink()
