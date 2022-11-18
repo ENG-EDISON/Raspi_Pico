@@ -6,7 +6,7 @@ from machine import UART
 uart = UART(1, 9600)
 #Forever running loop
 while(True):
-    #Write the bits to the uart port
+    #Write the data to the uart port
     uart.write("Hello World!\n")
     #Delay for 1 second
     time.sleep(1);
