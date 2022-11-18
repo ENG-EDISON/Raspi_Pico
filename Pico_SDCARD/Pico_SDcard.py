@@ -2,6 +2,7 @@ import machine
 import sdcard
 import uos
 
+#get the sdcard.py from https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/storage/sdcard/sdcard.py
 # Assign chip select (CS) pin (and start it high)
 cs = machine.Pin(1, machine.Pin.OUT)
 
