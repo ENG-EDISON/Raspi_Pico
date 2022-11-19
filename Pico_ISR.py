@@ -1,7 +1,8 @@
 from machine import Pin
 import time
 
-#create a pin object and select the GPIO number
+#create a pin object and select the GPIO number of the Pin
+#configure the pin in PULL UP mode
 pin = Pin(5,Pin.IN,Pin.PULL_UP)
 #Create a pin object where the LED is connected(use 25 for onboard led)
 #Configure the pin as OUTPUT
