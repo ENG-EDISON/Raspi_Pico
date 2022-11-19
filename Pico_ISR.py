@@ -21,8 +21,11 @@ def callback(pin):
 pin.irq(trigger=Pin.IRQ_FALLING, handler=callback)
 
 while True:
+    #if led is on,print "Led ON"
     if led.value()==1:
         print("Led ON")
+    #if led is OFF,print "Led OFF"
     else:
         print("Led OFF")
+    #Delay for 1 second
     time.sleep(1)
