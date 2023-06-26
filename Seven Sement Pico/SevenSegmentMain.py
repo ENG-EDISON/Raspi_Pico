@@ -1,0 +1,22 @@
+from Seg_Module import Seven_Segment
+import time
+Display1=Seven_Segment(16,17,18,19,20,21,22)#hgfedcba
+Display1.Display(1)
+time.sleep(1)
+Display1.Display(2)
+time.sleep(1)
+Display1.Display(3)
+time.sleep(1)
+Display1.Display(4)
+time.sleep(1)
+Display1.Display(5)
+time.sleep(1)
+Display1.Display(6)
+time.sleep(1)
+Display1.Display(7)
+time.sleep(1)
+Display1.Display(8)
+time.sleep(1)
+Display1.Display(9)
+time.sleep(1)
+Display1.Display(10)
