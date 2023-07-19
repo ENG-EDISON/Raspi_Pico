@@ -24,14 +24,14 @@ def scan_for_picos(verbose=False):
         if verbose:
             print("Checking",port.device)
         if port.manufacturer !=None:
-            if "Silicon Labs" in port.manufacturer:
+            if "STMicroelectronics" in port.manufacturer:
                 picos.append(port.device)
-            return picos
+    return picos
 picos=scan_for_picos()
 pico1=print_ports_info()
-print("Picos Found:")
 for pico in picos:
-    print(pico)
+    print("Picos Found are:",pico)
+print("Picos",picos)
 s=serial.Serial(pico,baudrate=115200)
 Query=[b't',b's']
 while True:
